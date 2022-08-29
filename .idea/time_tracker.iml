@@ -40,6 +40,7 @@
     <orderEntry type="library" scope="PROVIDED" name="activestorage (v7.0.3.1, asdf: 2.7.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v7.0.3.1, asdf: 2.7.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="addressable (v2.8.1, asdf: 2.7.6) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="administrate (v0.18.0, asdf: 2.7.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="autoprefixer-rails (v10.4.7.0, asdf: 2.7.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.18, asdf: 2.7.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bindex (v0.8.1, asdf: 2.7.6) [gem]" level="application" />
@@ -65,6 +66,10 @@
     <orderEntry type="library" scope="PROVIDED" name="irb (v1.4.1, asdf: 2.7.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.11.5, asdf: 2.7.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v4.5.0, asdf: 2.7.6) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="kaminari (v1.2.2, asdf: 2.7.6) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="kaminari-actionview (v1.2.2, asdf: 2.7.6) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="kaminari-activerecord (v1.2.2, asdf: 2.7.6) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="kaminari-core (v1.2.2, asdf: 2.7.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="loofah (v2.18.0, asdf: 2.7.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.7.1, asdf: 2.7.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="marcel (v1.0.2, asdf: 2.7.6) [gem]" level="application" />
@@ -100,6 +105,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rubyzip (v2.3.2, asdf: 2.7.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sassc (v2.4.0, asdf: 2.7.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sassc-rails (v2.1.2, asdf: 2.7.6) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="selectize-rails (v0.12.6, asdf: 2.7.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v4.4.0, asdf: 2.7.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v4.1.1, asdf: 2.7.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v3.4.2, asdf: 2.7.6) [gem]" level="application" />
@@ -130,6 +136,23 @@
         <option value="active_record:application_record" />
         <option value="active_record:devise" />
         <option value="active_record:multi_db" />
+        <option value="administrate:assets" />
+        <option value="administrate:assets:javascripts" />
+        <option value="administrate:assets:stylesheets" />
+        <option value="administrate:dashboard" />
+        <option value="administrate:field" />
+        <option value="administrate:install" />
+        <option value="administrate:routes" />
+        <option value="administrate:view" />
+        <option value="administrate:views" />
+        <option value="administrate:views:edit" />
+        <option value="administrate:views:field" />
+        <option value="administrate:views:form" />
+        <option value="administrate:views:index" />
+        <option value="administrate:views:layout" />
+        <option value="administrate:views:navigation" />
+        <option value="administrate:views:new" />
+        <option value="administrate:views:show" />
         <option value="application_record" />
         <option value="benchmark" />
         <option value="channel" />
@@ -143,6 +166,8 @@
         <option value="integration_test" />
         <option value="jbuilder" />
         <option value="job" />
+        <option value="kaminari:config" />
+        <option value="kaminari:views" />
         <option value="mailbox" />
         <option value="mailer" />
         <option value="migration" />
@@ -171,6 +196,23 @@
         <option value="active_record:application_record" />
         <option value="active_record:devise" />
         <option value="active_record:multi_db" />
+        <option value="administrate:assets" />
+        <option value="administrate:assets:javascripts" />
+        <option value="administrate:assets:stylesheets" />
+        <option value="administrate:dashboard" />
+        <option value="administrate:field" />
+        <option value="administrate:install" />
+        <option value="administrate:routes" />
+        <option value="administrate:view" />
+        <option value="administrate:views" />
+        <option value="administrate:views:edit" />
+        <option value="administrate:views:field" />
+        <option value="administrate:views:form" />
+        <option value="administrate:views:index" />
+        <option value="administrate:views:layout" />
+        <option value="administrate:views:navigation" />
+        <option value="administrate:views:new" />
+        <option value="administrate:views:show" />
         <option value="application_record" />
         <option value="benchmark" />
         <option value="channel" />
@@ -184,6 +226,8 @@
         <option value="integration_test" />
         <option value="jbuilder" />
         <option value="job" />
+        <option value="kaminari:config" />
+        <option value="kaminari:views" />
         <option value="mailbox" />
         <option value="mailer" />
         <option value="migration" />

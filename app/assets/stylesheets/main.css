@@ -11,3 +11,13 @@
     color: black;
     text-decoration: none;
 }
+
+.button-holder {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.button-holder button {
+    margin: 0px 10px;
+}

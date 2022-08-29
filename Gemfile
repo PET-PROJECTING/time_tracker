@@ -17,6 +17,8 @@ gem 'devise'
 gem 'faker'
 gem 'bootstrap', '~> 5.2.0'
 gem 'jquery-rails'
+gem "administrate"
+
 
 
 

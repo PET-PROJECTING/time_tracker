@@ -36,7 +36,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to root_path, notice: "Post was successfully deleted"
+    redirect_to root_path, notice: "Post was successfully deleted", status: :see_other
   end
 
   private

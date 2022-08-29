@@ -23,8 +23,6 @@ H
 app/models/admin_user.rb,2/d/2dd330c7de30b8b9150ad2110aebc22597169d86
 <
 Gemfile.lock,2/1/21fb5836b499a2be648386aac055d2e069160d6c
-7
-Gemfile,d/e/de3150c01c3a946a6168173c4116741379fe3579
 B
 app/models/post.rb,d/9/d93c4f2b9b37fb2b9ad6808eea1494a6ec09b0c9
 M
@@ -35,5 +33,3 @@ U
 %app/views/static_pages/index.html.erb,9/b/9b0f3eb9ddc14a507d8ca56b2418461f7e3686a7
 W
 'app/assets/stylesheets/application.scss,1/6/1637dd5207d3586063c883b080a13b0322095524
-@
-config/routes.rb,e/8/e801163eb9182955dca3eb9817d59af634f6665d

@@ -1,0 +1,7 @@
+<% unless user_signed_in? %>
+  <h1 class="center">Please sign up/in</h1>
+<% end %>
+<% if user_signed_in? %>
+  <h1 class="center">Welcome <%= current_user.nickname %></h1>
+<% end %>
+

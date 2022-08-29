@@ -1,0 +1,13 @@
+.no_dec {
+    text-decoration: none;
+    color: white;
+}
+
+.center {
+    text-align: center;
+}
+
+.black-link {
+    color: black;
+    text-decoration: none;
+}

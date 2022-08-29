@@ -1,0 +1,9 @@
+<%= form_for post do |f| %>
+  <%= f.label :title, class:"form-label" %>
+  <%= f.text_field :title, class:"form-control" %>
+  <br>
+  <%= f.label :body, class:"form-label" %>
+  <%= f.text_area :body, class:"form-control", size:"10x10" %>
+  <br>
+  <%= f.submit "#{button_text}", class:"form-control btn btn-outline-dark" %>
+<% end %>

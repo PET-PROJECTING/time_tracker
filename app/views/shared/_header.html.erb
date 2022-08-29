@@ -1,0 +1,29 @@
+<header class="p-3 text-bg-dark">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><%= link_to "Time Tracker", root_path, class: "nav-link px-2 text-white" %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to "Posts", posts_path, class: "nav-link px-2 text-white" %></li>
+          <li><%= link_to "Home", root_path, class: "nav-link px-2 text-white" %></li>
+          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+        <% end %>
+      </ul>
+      <% unless user_signed_in? %>
+        <%= button_to "Sign Up", new_user_registration_path, class: "btn btn-outline-light me-2", method: :get %>
+        <%= button_to "Log in", new_user_session_path, class: "btn btn-outline-light me-2" %>
+      <% end %>
+      <% if user_signed_in? %>
+        <div class="dropdown">
+          <button class="btn btn-outline-light me-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Profile
+          </button>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Edit", edit_user_registration_path, class: "no_dec dropdown-item text-center text-dark" %></li>
+            <li><%= button_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item text-center text-dark" %></li>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</header>

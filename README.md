@@ -1,24 +1,16 @@
-# README
+## Time Tracker app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Models
+- User
+- AdminUser (STI < User)
+- Post
 
-Things you may want to cover:
+## Gems
+- devise
+- faker
+- bootstrap
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Versions
+- ruby 2.7.6p219
+- rails 7.0.3.1
+- sqlite 3.37.0

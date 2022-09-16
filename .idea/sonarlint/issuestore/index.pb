@@ -17,8 +17,6 @@ b
 2db/migrate/20220826155539_add_user_ref_to_posts.rb,1/5/1594dbd89da1f59e586439e046179d05c33493c6
 B
 app/models/user.rb,4/e/4ed0c03b53dbc8320da88e7887465514cd9e90a4
-;
-db/seeds.rb,8/1/816631bad3665c05f73dd7befe12c619677d6d62
 H
 app/models/admin_user.rb,2/d/2dd330c7de30b8b9150ad2110aebc22597169d86
 <
@@ -27,8 +25,6 @@ B
 app/models/post.rb,d/9/d93c4f2b9b37fb2b9ad6808eea1494a6ec09b0c9
 M
 app/javascript/application.js,1/5/152e2c420fe74ffc17152624ffc17eed9bcc66a5
-V
-&app/views/layouts/application.html.erb,e/8/e82294e631b91cb53fe2e362dfd3b8e4a3924ae2
 U
 %app/views/static_pages/index.html.erb,9/b/9b0f3eb9ddc14a507d8ca56b2418461f7e3686a7
 W

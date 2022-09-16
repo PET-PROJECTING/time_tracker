@@ -28,7 +28,6 @@ p "Main user was created"
               password_confirmation: "test1234")
 end
 p "Regular users were created"
-
 30.times do
   Post.create(title: Faker::Lorem.sentence(word_count: 3),
               date: Date.today,

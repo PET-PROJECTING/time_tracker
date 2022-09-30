@@ -28,10 +28,11 @@ p "Main user was created"
               password_confirmation: "test1234")
 end
 p "Regular users were created"
-30.times do
+300.times do
   Post.create(title: Faker::Lorem.sentence(word_count: 3),
               date: Date.today,
               body: Faker::Lorem.paragraph(sentence_count: 5),
-              user_id: rand(10))
+              user_id: rand(10),
+              status: rand(3))
 end
 p "Posts were created"

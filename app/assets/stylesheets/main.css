@@ -7,9 +7,23 @@
     text-align: center;
 }
 
+.div-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .black-link {
     color: black;
     text-decoration: none;
+}
+
+.active-link {
+    text-decoration: underline;
+}
+
+.no-hover {
+    pointer-events: none;
 }
 
 .button-holder {
@@ -20,4 +34,22 @@
 
 .button-holder button {
     margin: 0px 10px;
+}
+
+.refresh {
+    background-image: url(refresh.png);
+    background-position: center;
+    width: 40px;
+    height: 38px;
+    transition: all 0.2s ease;
+}
+
+.refresh:hover {
+    background-image: url(refresh_white.png);
+}
+
+.status {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
 }

@@ -8,14 +8,14 @@ class UserDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    id: Field::Number,
+    id: Field::Number.with_options(searchable: true),
     age: Field::Number,
-    email: Field::String,
+    email: Field::String.with_options(searchable: true),
     password: Field::String,
     encrypted_password: Field::String,
-    first_name: Field::String,
-    last_name: Field::String,
-    nickname: Field::String,
+    first_name: Field::String.with_options(searchable: true),
+    last_name: Field::String.with_options(searchable: true),
+    nickname: Field::String.with_options(searchable: true),
     posts: Field::HasMany,
     remember_created_at: Field::DateTime,
     reset_password_sent_at: Field::DateTime,

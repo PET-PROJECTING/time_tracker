@@ -18,6 +18,8 @@ gem 'faker'
 gem 'bootstrap', '~> 5.2.0'
 gem 'jquery-rails'
 gem "administrate"
+gem 'kaminari'
+gem 'pry', '~> 0.13.1'
 
 
 

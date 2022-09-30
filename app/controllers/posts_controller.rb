@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
+  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
+
   def index
-    @posts = Post.all
+    @posts = filtered_records.order(:title).page params[:page]
   end
 
   def new
@@ -9,8 +11,10 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.user_id = current_user.id
+    @post.date = Time.current
     if @post.save
-      redirect_to @post, status: :created, notice: "Post was successfully created"
+      redirect_to @post, notice: "Post was successfully created"
     else
       render :new, status: :unprocessable_entity
     end
@@ -27,7 +31,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      redirect_to @post, status: 200, notice: "Post was successfully updated"
+      redirect_to @post, notice: "Post was successfully updated"
     else
       render :edit, status: :unprocessable_entity
     end
@@ -36,12 +40,34 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to root_path, notice: "Post was successfully deleted", status: :see_other
+    redirect_to posts_path, notice: "Post №#{params[:id]} was successfully deleted"
   end
 
   private
 
   def post_params
-    params.require(:post).permit(:title, :date, :body)
+    params.require(:post).permit(:title, :date, :body, :status, :user_id)
+  end
+
+  def filter_by_status
+    Post.send(params[:filter_by].intern)
+  end
+
+  def filter_by_author
+    Post.joins(:user).where('users.nickname LIKE ?', "%#{params[:search]}%")
+  end
+
+  def filtered_records
+    if params[:search].present?
+      filter_by_author
+    elsif params[:filter_by].present?
+      filter_by_status
+    else
+      Post
+    end
+  end
+
+  def record_not_found
+    render plain: "404 Not Found", status: 404
   end
 end

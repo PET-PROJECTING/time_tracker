@@ -1,18 +1,21 @@
-<%= render "shared/link_back" %>
-<br>
+<br><%= render "shared/link_back" %><br><br>
+
 <div class="card text-center">
   <div class="card-header">
-    Post №<%= @post.id %>
+    Post <strong>№<%= @post.id %></strong>
   </div>
   <div class="card-body">
     <h5 class="card-title">Title: <%= @post.title %></h5>
     <p class="card-text">Body: <%= @post.body %>></p>
     <div class="button-holder">
       <%= button_to "Edit", edit_post_path(@post), class: "btn btn-outline-dark", method: :get %>
-      <%= button_to "Destroy", post_path(@post), class: "btn btn-outline-dark", method: :delete %>
+      <%= button_to "Destroy", post_path(@post), class: "btn btn-outline-dark", method: :delete, form: {data: {turbo_confirm: 'Are you sure?'}} %>
     </div>
   </div>
+  <div class="card-footer">
+    Current status: <strong class="h5 font-weight-bold <%= status_text_color(@post.status) %>"><%= @post.status.capitalize %></strong>
+  </div>
   <div class="card-footer text-muted">
-    <%= @post.date %>
+    Creation date: <strong><%= @post.date %></strong>
   </div>
 </div>

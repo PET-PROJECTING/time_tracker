@@ -5,8 +5,12 @@ Rails.application.routes.draw do
       resources :posts
 
       root to: "users#index"
-    end
-  resources :posts
+  end
+
+  resources :posts do
+    get '/page/:page', action: :index, on: :collection
+  end
+
   devise_for :users, skip: [:registration]
   root "static_pages#index"
 end

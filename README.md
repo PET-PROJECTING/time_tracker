@@ -9,6 +9,7 @@
 - devise
 - faker
 - bootstrap
+- kaminari
 
 ## Versions
 - ruby 2.7.6p219

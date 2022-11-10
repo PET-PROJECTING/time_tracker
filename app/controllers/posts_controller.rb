@@ -1,8 +1,12 @@
 class PostsController < ApplicationController
+  include Permission
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
-
   def index
-    @posts = filtered_records.order(:title).page params[:page]
+    if is_admin?
+      @posts = filtered_records.order(:title).page params[:page]
+    else
+      @posts = filtered_records.order(:title).where(user_id: current_user.id).page params[:page]
+    end
   end
 
   def new

@@ -26,6 +26,7 @@ gem 'pry', '~> 0.13.1'
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'rubocop'
 end
 
 group :development do

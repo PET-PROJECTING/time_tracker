@@ -33,3 +33,47 @@ U
 %app/views/static_pages/index.html.erb,9/b/9b0f3eb9ddc14a507d8ca56b2418461f7e3686a7
 W
 'app/assets/stylesheets/application.scss,1/6/1637dd5207d3586063c883b080a13b0322095524
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+T
+$app/views/shared/_link_back.html.erb,3/1/31704d1189b124149e8ac77830d0d853d656db17
+Q
+!app/views/shared/_header.html.erb,7/6/76d1a11ee1e940c5ee3f38422c24188edb0fe433
+[
++app/views/devise/registrations/new.html.erb,3/f/3f5f33da115bf173e0bae0a1ac8ef10f2438c0c8
+V
+&app/views/devise/sessions/new.html.erb,0/8/08409c853905fab195e12ec49b3d919f3d6a2b9c
+W
+'app/views/devise/shared/_links.html.erb,5/e/5e93195e12c5a8c62e1e3a2d8ab56a9a19d395ba
+L
+app/views/posts/new.html.erb,5/9/59e031484d58dbcb8e417aa82a85233f7a7a27db
+O
+app/views/shared/_form.html.erb,b/8/b8a94520b2e1768a3c84e2c9fce332808af0d6ab
+M
+app/views/posts/edit.html.erb,1/8/1837323907eca4c84bdf2b5c7db8b65366c376d6
+7
+Gemfile,d/e/de3150c01c3a946a6168173c4116741379fe3579
+@
+config/routes.rb,e/8/e801163eb9182955dca3eb9817d59af634f6665d
+N
+app/views/posts/index.html.erb,e/0/e08b1af70fd3316e257b6e1712d954c7518b9991
+S
+#app/controllers/posts_controller.rb,f/9/f996b5876ce8e20a89628ca920dc56b60c229b09
+O
+app/assets/stylesheets/main.css,7/c/7cde85054895eb08b1d4f740396cb166f13e4280
+Y
+)app/controllers/admin/users_controller.rb,7/4/7461c5c051f8149055bb062870e32196a86e8289
+Y
+)app/controllers/admin/posts_controller.rb,0/a/0a3da691839f49aa92c05e3c32f0a072d2d42a72
+_
+/app/controllers/admin/application_controller.rb,3/9/3979e05af59ee2e24ead544dc66873b78dc479ba
+P
+ app/dashboards/post_dashboard.rb,1/3/13fe6ba07b4b91bbeb8c03348bae88342c232279
+_
+/app/controllers/admin/admin_users_controller.rb,c/3/c345a384d916c03fcf43ec506002faecb4879bfb
+M
+app/views/posts/show.html.erb,8/3/839ab6fb367d41c538f013c58046c55553063e2f
+V
+&app/dashboards/admin_user_dashboard.rb,1/c/1cc34f003a1c79d2be154366718f01d95f22eefc
+P
+ app/dashboards/user_dashboard.rb,6/7/67ea93ff5a4b83916afa0f71a40ee5ac9d1342da

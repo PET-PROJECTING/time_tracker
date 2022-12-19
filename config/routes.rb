@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'controll/inside'
+  get 'controll/outside'
+  get 'controll/classification'
+  get 'controll/attacks'
+
   namespace :admin do
       resources :users
       resources :admin_users

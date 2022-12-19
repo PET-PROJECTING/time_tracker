@@ -21,3 +21,12 @@
 .button-holder button {
     margin: 0px 10px;
 }
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.bottom-10 {
+    position: relative;
+    top: 40px;
+}

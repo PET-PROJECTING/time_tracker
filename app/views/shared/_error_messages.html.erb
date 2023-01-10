@@ -1,7 +1,8 @@
-<% if flash.any? %>
+<% if flash.any? && user_signed_in? %>
   <% flash.each do |type, msg| %>
     <div class="alert <%= flash_class(type) %> alert-dismissible fade show" role="alert">
       <strong><%= msg %></strong>
+      <%= javascript_tag "$(\".alert\" ).fadeOut(3000);" %>
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
   <% end %>

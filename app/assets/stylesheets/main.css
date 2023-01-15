@@ -53,3 +53,8 @@
     height: 24px;
     border-radius: 50%;
 }
+
+.flex-form-approval {
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -5,6 +5,7 @@
   <%= f.label :body, class:"form-label" %>
   <%= f.text_area :body, class:"form-control", size:"10x10" %>
   <br>
-  <%= render "shared/status_approval", f: f if is_admin? && is_edit? %>
+  <div class="form-control flex-form-approval"><%= render "shared/status_approval", f: f if is_admin? && is_edit? %></div>
+  <br>
   <%= f.submit "#{button_text}", class:"form-control btn btn-outline-dark" %>
 <% end %>

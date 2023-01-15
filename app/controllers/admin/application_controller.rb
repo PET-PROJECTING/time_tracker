@@ -8,11 +8,11 @@ module Admin
   class ApplicationController < Administrate::ApplicationController
     include Permission
     before_action :authenticate_admin
-    ADMIN_TYPES = ['AdminUser', 'SuperAdmin', "GodAccess"]
+    ADMIN_TYPES = %w[AdminUser SuperAdmin GodAccess]
 
     def authenticate_admin
       unless is_admin?
-        flash[:error] = "You are not authorized to access this page!"
+        flash[:error] = 'You are not authorized to access this page!'
         redirect_to(root_path)
       end
     end

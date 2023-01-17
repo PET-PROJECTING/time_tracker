@@ -3,9 +3,17 @@
     Filter by: Status
   </button>
   <ul class="dropdown-menu">
-    <li><%= link_to 'Active', { controller: 'posts', action: 'index', :filter_by => 'active' }, class: "dropdown-item text-center text-dark" %></li>
-    <li><%= link_to 'Accepted', { controller: 'posts', action: 'index', :filter_by => 'accepted' }, class: "dropdown-item text-center text-dark" %></li>
-    <li><%= link_to 'Rejected', { controller: 'posts', action: 'index', :filter_by => 'rejected' }, class: "dropdown-item text-center text-dark" %></li>
+    <li class="dropdown-item">
+      <%= radio_button_tag :status, 'active' %>
+      <%= label_tag('active', "Active", for: "status_active") %>
+    </li>
+    <li class="dropdown-item">
+      <%= radio_button_tag :status, 'accepted' %>
+      <%= label_tag('accepted', "Accepted", for: "status_accepted") %>
+    </li>
+    <li class="dropdown-item">
+      <%= radio_button_tag :status, 'rejected' %>
+      <%= label_tag('rejected', "Rejected", for: "status_rejected") %>
+    </li>
   </ul>
 </div>
-

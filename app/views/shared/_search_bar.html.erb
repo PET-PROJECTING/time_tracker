@@ -1,6 +1,7 @@
 <div>
   <%= form_tag(posts_path, method: :get, class: "form d-flex mx-3") do %>
     <%= text_field_tag(:search, params[:search], class: "form-control mx-1", placeholder: "Filter by: Author") %>
+    <%= render "shared/filters_container" %>
     <%= submit_tag ("Search"), class: "btn btn-outline-dark" %>
   <% end %>
 </div>

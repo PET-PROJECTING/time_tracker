@@ -1,12 +1,12 @@
 class PostsController < ApplicationController
   include Permission
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
+
   def index
-    if is_admin?
-      @posts = filtered_records.order(:title).page params[:page]
-    else
-      @posts = filtered_records.order(:title).where(user_id: current_user.id).page params[:page]
-    end
+    @posts = Post.order(:title).page params[:page]
+    @posts = @posts.where(user_id: current_user.id) unless is_admin?
+    @posts = @posts.joins(:user).where('users.nickname LIKE ?', "%#{params[:search]}%") if params[:search]
+    @posts = @posts.send(params[:status].intern) if params[:status]
   end
 
   def new
@@ -51,28 +51,6 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :date, :body, :status, :user_id)
-  end
-
-  def filter_by_status
-    Post.send(params[:filter_by].intern)
-  end
-
-  def filter_by_author
-    Post.joins(:user).where('users.nickname LIKE ?', "%#{params[:search]}%")
-  end
-
-  def filtered_records #TODO: refactor
-    return Post unless params[:search] || params[:filter_by]
-
-
-
-    if params[:search].present?
-      filter_by_author
-    elsif params[:filter_by].present?
-      filter_by_status
-    else
-      Post
-    end
   end
 
   def record_not_found

@@ -1,7 +1,6 @@
 <h1 class="center">There are <%= Post.count %> posts (<%= Post.active.count %> active) </h1>
 <div class="d-flex p-2 justify-content-end">
   <div><%= render "shared/search_bar" if is_admin? %></div>
-  <div><%= render "shared/filters_container" %></div>
   <div><%= render "shared/refresh" %></div>
 </div>
 <br>

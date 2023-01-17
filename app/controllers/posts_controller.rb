@@ -61,7 +61,11 @@ class PostsController < ApplicationController
     Post.joins(:user).where('users.nickname LIKE ?', "%#{params[:search]}%")
   end
 
-  def filtered_records
+  def filtered_records #TODO: refactor
+    return Post unless params[:search] || params[:filter_by]
+
+
+
     if params[:search].present?
       filter_by_author
     elsif params[:filter_by].present?

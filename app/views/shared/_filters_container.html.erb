@@ -1,18 +1,18 @@
 <div class="dropdown">
   <button class="btn btn-outline-dark me-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Filter by: Status
+    <%= filter_by_status %>
   </button>
   <ul class="dropdown-menu">
     <li class="dropdown-item">
-      <%= radio_button_tag :status, 'active' %>
+      <%= radio_button_tag :status, 'active', should_be_checked?(:status, 'active') %>
       <%= label_tag('active', "Active", for: "status_active") %>
     </li>
     <li class="dropdown-item">
-      <%= radio_button_tag :status, 'accepted' %>
+      <%= radio_button_tag :status, 'accepted', should_be_checked?(:status, 'accepted')  %>
       <%= label_tag('accepted', "Accepted", for: "status_accepted") %>
     </li>
     <li class="dropdown-item">
-      <%= radio_button_tag :status, 'rejected' %>
+      <%= radio_button_tag :status, 'rejected', should_be_checked?(:status, 'rejected')  %>
       <%= label_tag('rejected', "Rejected", for: "status_rejected") %>
     </li>
   </ul>

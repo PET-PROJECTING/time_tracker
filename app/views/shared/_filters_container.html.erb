@@ -15,5 +15,10 @@
       <%= radio_button_tag :status, 'rejected', should_be_checked?(:status, 'rejected')  %>
       <%= label_tag('rejected', "Rejected", for: "status_rejected") %>
     </li>
+    <li class="center">
+      <% if any_status_filter_applied? %>
+        <%= link_to "Clear status", { controller: 'posts', action: 'index', params: search_option } %>
+      <% end %>
+    </li>
   </ul>
 </div>

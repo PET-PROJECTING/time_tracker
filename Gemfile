@@ -20,7 +20,7 @@ gem 'jquery-rails'
 gem "administrate"
 gem 'kaminari'
 gem 'pry', '~> 0.13.1'
-
+gem 'pundit', '~> 2.3'
 
 
 

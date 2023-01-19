@@ -7,4 +7,15 @@ module PostsHelper
     return false unless params[param.intern].present?
     params[param.intern] == status ? true : false
   end
+
+  def search_option
+    url = request.original_url.split('?')
+    url = url.last.split('&').map { |x| x.split('=') } if url.size > 1
+    option_arr = url.find { |x| x.include?('search') } || []
+    { search: option_arr.last } if option_arr.size > 1
+  end
+
+  def any_status_filter_applied?
+    params[:status].present?
+  end
 end

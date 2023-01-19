@@ -28,7 +28,7 @@
         <div class="status <%= status_bg_color(post.status) %>"></div>
       </td>
       <td><%= post.user.nickname %></td>
-      <td><%= button_to "", edit_post_path(post), class: "btn btn-outline-dark", method: :get %></td>
+      <td><%= button_to "", edit_post_path(post), class: "btn btn-outline-dark #{"bg-black" if post.accepted?}", method: :get, disabled: post.accepted? %></td>
       <td><%= button_to "", post_path(post), class: "btn btn-outline-dark", method: :get %></td>
     </tr>
   <% end %>
